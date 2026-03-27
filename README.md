@@ -17,8 +17,8 @@ classical retrieval models to modern AI-driven architectures.
 - Libraries: NLTK / spaCy, scikit-learn, NumPy, Hugging Face Transformers
 
 ## Structure
-├── notebooks/   # Jupyter notebooks for assignments and experiments
-└── project/     # Final project
+notebooks/   # Jupyter notebooks for assignments and experiments
+project/     # Final project
 
 ## Reference
 Manning, Raghavan & Schutze — An Introduction to Information Retrieval
