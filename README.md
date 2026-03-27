@@ -18,6 +18,7 @@ classical retrieval models to modern AI-driven architectures.
 
 ## Structure
 notebooks/   # Jupyter notebooks for assignments and experiments
+
 project/     # Final project
 
 ## Reference
