@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "type": "factual",
+    "question": "What is TF-IDF and how is it calculated?",
+    "reference_answer": "TF-IDF stands for Term Frequency-Inverse Document Frequency. It is calculated as the product of two statistics: TF (how frequently a term appears in a document) and IDF (the log of the ratio of total documents to documents containing the term). It weights terms that are frequent in a document but rare across the corpus.",
+    "source_chapter": "6"
+  },
+  {
+    "id": 2,
+    "type": "factual",
+    "question": "What is an inverted index and what does it store?",
+    "reference_answer": "An inverted index is a data structure that maps terms to the list of documents in which they appear (called a postings list). Each entry typically stores the document ID and may also store term frequency and positional information.",
+    "source_chapter": "1"
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "question": "What are the main components of a Boolean retrieval model?",
+    "reference_answer": "The Boolean retrieval model uses Boolean operators (AND, OR, NOT) to combine query terms. It retrieves documents that exactly satisfy the Boolean expression. It relies on an inverted index and returns a binary result: a document either matches or it doesn't.",
+    "source_chapter": "1"
+  },
+  {
+    "id": 4,
+    "type": "factual",
+    "question": "What is precision and recall in information retrieval evaluation?",
+    "reference_answer": "Precision is the fraction of retrieved documents that are relevant: P = relevant_retrieved / retrieved. Recall is the fraction of all relevant documents that were retrieved: R = relevant_retrieved / relevant. They often trade off against each other.",
+    "source_chapter": "8"
+  },
+  {
+    "id": 5,
+    "type": "factual",
+    "question": "What is the vector space model in IR?",
+    "reference_answer": "The vector space model represents documents and queries as vectors in a high-dimensional term space. Each dimension corresponds to a term, and weights (e.g. TF-IDF) are assigned to each term. Similarity between a document and a query is computed using cosine similarity.",
+    "source_chapter": "6"
+  },
+  {
+    "id": 6,
+    "type": "factual",
+    "question": "What is stemming and why is it used in IR preprocessing?",
+    "reference_answer": "Stemming is the process of reducing words to their root form (e.g. 'running' → 'run'). It is used to normalize term variations so that different inflections of the same word are treated as equivalent during indexing and retrieval, improving recall.",
+    "source_chapter": "2"
+  },
+  {
+    "id": 7,
+    "type": "factual",
+    "question": "What is the PageRank algorithm and what was its original purpose?",
+    "reference_answer": "PageRank is a link analysis algorithm that assigns a numerical weight to each document in a hyperlinked set. Originally developed by Larry Page and Sergey Brin for Google, it estimates the importance of a web page based on the number and quality of links pointing to it.",
+    "source_chapter": "21"
+  },
+  {
+    "id": 8,
+    "type": "factual",
+    "question": "What is a stop word and how are stop words handled in IR?",
+    "reference_answer": "Stop words are very common words (e.g. 'the', 'is', 'and') that carry little information for retrieval. They are typically removed during preprocessing using a stop word list, which reduces index size and speeds up queries.",
+    "source_chapter": "2"
+  },
+  {
+    "id": 9,
+    "type": "factual",
+    "question": "What is the BM25 ranking formula?",
+    "reference_answer": "BM25 scores a document D for query Q as the sum over query terms of: IDF(qi) * [f(qi,D) * (k1+1)] / [f(qi,D) + k1*(1-b+b*|D|/avgdl)], where f(qi,D) is term frequency, |D| is document length, avgdl is average document length, and k1 and b are tuning parameters.",
+    "source_chapter": "11"
+  },
+  {
+    "id": 10,
+    "type": "factual",
+    "question": "What is query expansion and what is relevance feedback?",
+    "reference_answer": "Query expansion adds additional terms to the original query to improve recall. Relevance feedback is a technique where the user marks retrieved documents as relevant or not, and the system uses this information (Rocchio algorithm) to refine the query vector toward relevant documents.",
+    "source_chapter": "9"
+  },
+  {
+    "id": 11,
+    "type": "conceptual",
+    "question": "Why does BM25 generally outperform TF-IDF on longer documents?",
+    "reference_answer": "TF-IDF does not normalize for document length, so longer documents get unfairly high scores simply due to more term occurrences. BM25 includes a length normalization term (controlled by parameter b) that penalizes documents longer than average, making the scoring fairer across documents of different lengths.",
+    "source_chapter": "11"
+  },
+  {
+    "id": 12,
+    "type": "conceptual",
+    "question": "What is the difference between a positional index and a standard inverted index?",
+    "reference_answer": "A standard inverted index stores only which documents contain each term. A positional index additionally stores the positions (offsets) of each term within each document. This enables phrase queries and proximity searches that require knowing the relative positions of terms.",
+    "source_chapter": "2"
+  },
+  {
+    "id": 13,
+    "type": "conceptual",
+    "question": "Why is cosine similarity preferred over dot product for document similarity in the vector space model?",
+    "reference_answer": "The dot product is sensitive to document length — longer documents with more terms tend to have higher dot products regardless of relevance. Cosine similarity normalizes by the magnitude of both vectors, so it measures the angle between them rather than their magnitude, making it length-invariant.",
+    "source_chapter": "6"
+  },
+  {
+    "id": 14,
+    "type": "conceptual",
+    "question": "What is the precision-recall tradeoff and why does it exist?",
+    "reference_answer": "As a system retrieves more documents (increasing recall), it inevitably includes more irrelevant ones (decreasing precision). Conversely, retrieving fewer, only very-confident results improves precision but misses relevant documents (lower recall). This tradeoff is inherent because no system can perfectly separate relevant from irrelevant documents.",
+    "source_chapter": "8"
+  },
+  {
+    "id": 15,
+    "type": "conceptual",
+    "question": "What is the difference between explicit and implicit relevance feedback?",
+    "reference_answer": "Explicit relevance feedback requires the user to actively judge documents as relevant or not relevant. Implicit relevance feedback infers relevance from user behavior (e.g. clicks, dwell time, scrolling) without requiring explicit input. Implicit feedback is more scalable but noisier.",
+    "source_chapter": "9"
+  },
+  {
+    "id": 16,
+    "type": "conceptual",
+    "question": "Why is the IDF component of TF-IDF useful for retrieval?",
+    "reference_answer": "IDF (Inverse Document Frequency) downweights terms that appear in many documents, because common terms are less discriminative for retrieval. Rare terms that appear in few documents are upweighted, as their presence is more informative about what a document is specifically about.",
+    "source_chapter": "6"
+  },
+  {
+    "id": 17,
+    "type": "applied",
+    "question": "How would you use an inverted index to answer the Boolean query 'information AND retrieval NOT web'?",
+    "reference_answer": "Retrieve the postings list for 'information', the postings list for 'retrieval', and the postings list for 'web'. Intersect the first two lists to get documents containing both terms (AND). Then subtract (NOT) the postings list for 'web' from the result. The remaining document IDs are the answer.",
+    "source_chapter": "1"
+  },
+  {
+    "id": 18,
+    "type": "applied",
+    "question": "How does the Rocchio algorithm update a query vector using relevance feedback?",
+    "reference_answer": "The Rocchio algorithm updates the query vector as: q_new = alpha*q_orig + beta*(1/|Rel|)*sum(d_rel) - gamma*(1/|NonRel|)*sum(d_nonrel), where q_orig is the original query, d_rel are relevant document vectors, d_nonrel are non-relevant document vectors, and alpha, beta, gamma are weights controlling how much each component influences the new query.",
+    "source_chapter": "9"
+  },
+  {
+    "id": 19,
+    "type": "applied",
+    "question": "How would you construct a phrase index to support the query 'information retrieval'?",
+    "reference_answer": "Using a positional index, retrieve all documents containing 'information' with their positions, and all documents containing 'retrieval' with their positions. For each document appearing in both lists, check whether any position of 'information' is immediately followed (position+1) by a position of 'retrieval'. Documents satisfying this adjacency constraint match the phrase query.",
+    "source_chapter": "2"
+  },
+  {
+    "id": 20,
+    "type": "applied",
+    "question": "Given a small corpus of 3 documents, how would you compute the TF-IDF weight of the term 'index' in a document where it appears 3 times?",
+    "reference_answer": "TF = 3 (term frequency in the document). IDF = log(N/df) where N=3 (total documents) and df is the number of documents containing 'index'. If 'index' appears in 2 of 3 documents, IDF = log(3/2) ≈ 0.405. TF-IDF = 3 * 0.405 ≈ 1.216. (Using natural log; results vary with log base choice.)",
+    "source_chapter": "6"
+  }
+]

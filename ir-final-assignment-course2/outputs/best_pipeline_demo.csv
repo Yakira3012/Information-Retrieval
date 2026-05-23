@@ -1,0 +1,70 @@
+question,answer,sources,latency,cost,faithfulness
+What is BM25 and how does it differ from TF-IDF?,"Based on the provided context, I cannot give a complete explanation of BM25. The context only makes a **brief mention** of BM25 in Chunk 2, stating that:
+
+> *""recent work has shown the LM approach to be very effective in retrieval experiments, **beating tf-idf and BM25 weights**""*
+
+This single reference only indicates that BM25 is a weighting scheme used in information retrieval that can be compared to tf-idf, but **no detailed explanation of what BM25 is or how it specifically differs from TF-IDF** is provided in the given context.
+
+Regarding **TF-IDF**, the context does explain it (Chunk 3): it assigns a weight to term *t* in document *d* by combining:
+- **Term frequency (tf)** – how often a term occurs in a document
+- **Inverse document frequency (idf)** – penalizing terms that appear in many documents
+
+But a proper comparison between BM25 and TF-IDF cannot be made based solely on the provided context.
+
+I don't know based on the provided context how BM25 is fully defined or how it differs from TF-IDF.","['para_924', 'para_481', 'para_243']",6.584,0.007455,5
+How does an inverted index support Boolean queries?,"Based on the provided context, an inverted index supports Boolean queries by allowing terms to be looked up and their associated postings lists to be retrieved and combined. Specifically:
+
+1. **Chapter 1** of the book referenced in the context ""introduces inverted indexes, and shows how simple Boolean queries can be processed using such indexes.""
+
+2. A practical example is illustrated in the context of **wildcard queries and k-gram indexes**: when processing a wildcard query (e.g., `re*ve`), a Boolean query (e.g., `$re AND ve$`) is run against the index, which yields a list of matching vocabulary terms. Each of those matching terms is then ""looked up in the **standard inverted index** to yield documents matching the query.""
+
+3. Furthermore, when combining wildcard queries with Boolean operators (e.g., `re*d AND fe*ri`), the inverted index supports the interpretation of **conjunctions of disjunctions** — since each wildcard query turns into a disjunction of single-term queries, the inverted index is used to find all documents containing any term matching each wildcard pattern.
+
+In essence, the inverted index maps terms to their corresponding postings lists (documents containing those terms), enabling Boolean operations (AND, OR) to be executed by intersecting or unioning those lists.","['para_58', 'para_123', 'para_19']",6.817,0.008949,3
+What metrics are used to evaluate IR systems?,"Based on the provided context, the following metrics and evaluation approaches for IR systems are mentioned:
+
+1. **Formal evaluation measures** for measuring the **effectiveness** of IR systems (Section 8.1)
+
+2. **Evaluation of unranked retrieval results** (Section 8.3), based on the notion of **relevant and nonrelevant documents**, including standard evaluation measures used for document retrieval and related tasks like **text classification**
+
+3. **Measures for evaluating ranked retrieval results** (Section 8.4)
+
+4. **User utility** as a key measure, with **user happiness** being described as the key utility measure. Factors contributing to user happiness include:
+   - **Speed of response**
+   - **Size of the index**
+   - **Relevance of results** (considered the most important factor)
+   - **User interface design** (layout, clarity, responsiveness)
+   - **Quality of result summary snippets** (Section 8.7)
+
+5. **Document length normalization** methods are also mentioned as an example of techniques developed within formal evaluation settings (such as TREC).
+
+However, the context does not provide specific named metrics (e.g., precision, recall, F-measure) in detail, as those are referenced in sections not fully included in the provided chunks.","['para_322', 'para_106', 'para_294']",6.319,0.007722,5
+Explain the difference between precision and recall.,"Based on the provided context, while precision and recall are identified as **""the two most frequent and basic measures for information retrieval effectiveness""** (Chunk 3), the context does not provide explicit definitions or a detailed explanation of the difference between the two concepts.
+
+What the context does tell us is:
+
+- **Precision and recall** were first introduced as notions by **Kent et al. (1955)**, though the term ""precision"" appeared later (Chunk 1).
+- They are described as **set-based measures**, computed using **unordered sets of documents** (Chunk 2).
+- In a **ranked retrieval context**, if the (k+1)th document retrieved is **non-relevant**, recall stays the same as for the top k documents, but **precision drops**. If it **is relevant**, both precision and recall increase (Chunk 2).
+
+This last point hints at their difference — precision is affected by non-relevant documents being retrieved, while recall relates to capturing relevant documents — but a full, explicit definition of each measure is **not contained in the provided context**.
+
+I don't know based on the provided context the complete and precise definitions that would allow a thorough explanation of the difference between precision and recall.","['para_335', 'para_307', 'para_300']",7.838,0.006585,5
+How does vector space model represent documents?,"## Document Representation in the Vector Space Model
+
+Based on the provided context, the vector space model represents each document as **a vector with one real-valued component for each term**, where the value is usually a **tf-idf weight**.
+
+Specifically:
+
+- The document space **X** (the domain of the classification function γ) is **R|V|**, where |V| represents the vocabulary size
+- Each dimension of the vector corresponds to a term in the vocabulary
+- The components are **real-valued**, typically using **tf-idf weights** (as opposed to Naive Bayes, which uses a sequence of terms or a binary vector)
+
+This representation contrasts with the Naive Bayes representation, which uses a sequence of terms or a binary vector **e₁,...,e|V| ∈ {0,1}|V|**.
+
+The context also notes that the choice of document representation is crucial — including factors such as:
+- **Type of weighting** used
+- **Stop list** decisions
+- Use of **length-normalized tf-idf representations**
+
+These choices determine whether documents in the same class form a **contiguous region** in the vector space, which is the fundamental requirement (the *contiguity hypothesis*) for successful vector space classification.","['para_564', 'para_395', 'para_438']",6.69,0.007926,5

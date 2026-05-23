@@ -1,0 +1,36 @@
+# Yakira_S - IR Final Assignment - Requirements
+
+# PDF Parsing
+pypdf==4.2.0
+pdfplumber==0.11.0
+
+# Text Processing
+nltk==3.8.1
+regex==2024.4.16
+
+# Embeddings
+sentence-transformers==3.0.1
+openai==1.30.1
+anthropic==0.28.0
+
+# Vector Search
+faiss-cpu==1.8.0
+rank-bm25==0.2.2
+
+# LLM / Generation
+ollama==0.2.1
+
+# Evaluation & Data
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.0
+
+# Visualization
+matplotlib==3.9.0
+seaborn==0.13.2
+
+# Utilities
+tqdm==4.66.4
+python-dotenv==1.0.1
+jupyter==1.0.0
+ipykernel==6.29.4

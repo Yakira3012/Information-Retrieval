@@ -1,0 +1,24 @@
+# Private / sensitive
+local/
+.env
+
+# Corpus (proprietary textbook PDF)
+data/
+
+# Large binary artifacts (too big for git)
+outputs/embeddings_*.pkl
+outputs/chunking_results.pkl
+index/faiss_index/
+index/bm25_index/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
