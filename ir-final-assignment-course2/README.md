@@ -95,9 +95,9 @@ jupyter notebook rag_experiments.ipynb
 
 ## Links
 - 📓 Notebook: *(this repo)*
-- 🗂️ Index files (FAISS/BM25): *[Google Drive link — add after running Stage 4]*
-- 📊 Outputs: *[Google Drive link — add after running Stage 7]*
-- 🎥 Presentation video: *[link — add after recording]*
+- 🗂️ Index files (FAISS/BM25 + embeddings pkl): [Google Drive](https://drive.google.com/drive/folders/1pZ95Gpqa4cO5RubbUtlqzG6qJ3poYxsn?usp=drive_link)
+- 📊 Outputs (embeddings, chunking pkl): [Google Drive](https://drive.google.com/drive/folders/1lbAqrMuUccCIQzb6k1YTD4_OFu7xuJM_?usp=drive_link)
+- 🎥 Presentation video: *TBD*
 
 ## References
 - Manning, C., Raghavan, P., Schütze, H. (2008). *Introduction to Information Retrieval*. Cambridge University Press.
