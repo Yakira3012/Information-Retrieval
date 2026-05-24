@@ -20,7 +20,7 @@ This project implements and evaluates a **Retrieval-Augmented Generation (RAG)**
 ## Project Structure
 
 ```
-ir-final-assignment-course3/
+ir-final-assignment-course2/
 ├── rag_experiments.ipynb     # Main experiment notebook
 ├── src/
 │   ├── chunking.py           # Experiment A — chunking strategies
@@ -36,17 +36,37 @@ ir-final-assignment-course3/
 │   └── research_paper.docx   # ACL-format research write-up
 ├── scripts/
 │   └── setup_ollama.sh       # One-time Ollama/llama3 setup
-├── HELPER.md                 # Background reading & concept explanations
 ├── requirements.txt
 └── .env.example              # API key template (never commit .env)
 ```
 
 ## Setup
 
+### 0. Prerequisites
+
+Before cloning, make sure you have the following:
+
+**API keys & funds**
+- **Anthropic API key** — create one at [console.anthropic.com](https://console.anthropic.com). Used for Claude Sonnet (Experiment D) and Claude Haiku (faithfulness judge). Add a small credit balance (~$1–2 is enough for one full run).
+- **OpenAI API key** — create one at [platform.openai.com](https://platform.openai.com). Used for `text-embedding-3-small` (Experiment B) and `gpt-4o-mini` (Experiment D). Add credits (~$0.50 is enough for one full run).
+
+**Tools to install**
+| Tool | Version | Purpose |
+|------|---------|---------|
+| Python | 3.10+ | Runtime |
+| pip | latest | Package manager |
+| Jupyter | any | Running the notebook — `pip install jupyter` |
+| Ollama | latest | Local LLM (Experiment D) — [ollama.com/download](https://ollama.com/download) |
+| Git | any | Cloning the repo |
+
+> **Ollama note:** Ollama is optional — if you skip it, Experiment D will only run the Claude and OpenAI backends. It works best on a machine with a GPU; on CPU it is very slow (~100s per query).
+
+---
+
 ### 1. Clone & install
 ```bash
-git clone https://github.com/YOUR_USERNAME/ir-final-assignment-course3.git
-cd ir-final-assignment-course3
+git clone https://github.com/Yakira3012/Information-Retrieval.git
+cd Information-Retrieval/ir-final-assignment-course2
 pip install -r requirements.txt
 ```
 
