@@ -20,12 +20,12 @@ classical retrieval models to modern AI-driven architectures.
 
 ```
 notebooks/                        # Jupyter notebooks for weekly assignments
-ir-final-assignment-course2/      # Final project — Experimental RAG Research
+project-course2/      # Final project — Experimental RAG Research
 ```
 
 ## Final Project — Experimental RAG Research
 
-The final project (`ir-final-assignment-course2/`) implements a complete **Retrieval-Augmented Generation (RAG)** pipeline over the IR textbook corpus. It systematically experiments with 4 design axes:
+The final project (`project-course2/`) implements a complete **Retrieval-Augmented Generation (RAG)** pipeline over the IR textbook corpus. It systematically experiments with 4 design axes:
 
 | Experiment | Variable | Options |
 |---|---|---|
@@ -36,7 +36,7 @@ The final project (`ir-final-assignment-course2/`) implements a complete **Retri
 
 **Key results:** Hybrid retrieval achieved the best MAP (0.883); Claude Sonnet produced the most faithful answers (4.65/5); MiniLM matched OpenAI embeddings at zero cost.
 
-See [`ir-final-assignment-course2/README.md`](ir-final-assignment-course2/README.md) for full setup and reproduction instructions.
+See [`project-course2/README.md`](project-course2/README.md) for full setup and reproduction instructions.
 
 ## Reference
 Manning, Raghavan & Schutze — An Introduction to Information Retrieval

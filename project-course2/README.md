@@ -20,7 +20,7 @@ This project implements and evaluates a **Retrieval-Augmented Generation (RAG)**
 ## Project Structure
 
 ```
-ir-final-assignment-course2/
+project-course2/
 ├── rag_experiments.ipynb     # Main experiment notebook
 ├── src/
 │   ├── chunking.py           # Experiment A — chunking strategies
@@ -66,7 +66,7 @@ Before cloning, make sure you have the following:
 ### 1. Clone & install
 ```bash
 git clone https://github.com/Yakira3012/Information-Retrieval.git
-cd Information-Retrieval/ir-final-assignment-course2
+cd Information-Retrieval/project-course2
 pip install -r requirements.txt
 ```
 
