@@ -1,6 +1,7 @@
 # Private / sensitive
 local/
 .env
+.claude/
 
 # Corpus (proprietary textbook PDF)
 data/
