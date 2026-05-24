@@ -17,9 +17,26 @@ classical retrieval models to modern AI-driven architectures.
 - Libraries: NLTK / spaCy, scikit-learn, NumPy, Hugging Face Transformers
 
 ## Structure
-notebooks/   # Jupyter notebooks for assignments and experiments
 
-project/     # Final project
+```
+notebooks/                        # Jupyter notebooks for weekly assignments
+ir-final-assignment-course2/      # Final project — Experimental RAG Research
+```
+
+## Final Project — Experimental RAG Research
+
+The final project (`ir-final-assignment-course2/`) implements a complete **Retrieval-Augmented Generation (RAG)** pipeline over the IR textbook corpus. It systematically experiments with 4 design axes:
+
+| Experiment | Variable | Options |
+|---|---|---|
+| A | Chunking Strategy | Fixed-size · Sentence · Paragraph |
+| B | Embedding Model | MiniLM (local) · OpenAI text-embedding-3-small |
+| C | Retrieval Method | Dense (FAISS) · Sparse (BM25) · Hybrid |
+| D | LLM Backend | Ollama/llama3 · Claude Sonnet · GPT-4o-mini |
+
+**Key results:** Hybrid retrieval achieved the best MAP (0.883); Claude Sonnet produced the most faithful answers (4.65/5); MiniLM matched OpenAI embeddings at zero cost.
+
+See [`ir-final-assignment-course2/README.md`](ir-final-assignment-course2/README.md) for full setup and reproduction instructions.
 
 ## Reference
 Manning, Raghavan & Schutze — An Introduction to Information Retrieval
