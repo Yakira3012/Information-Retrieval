@@ -135,7 +135,12 @@ def evaluate_retrieval(qa_set: List[Dict], retriever, embed_fn,
 
         if embed_fn is not None:
             q_emb, _ = embed_fn([query])
-            results = retriever.retrieve(q_emb[0], top_k=max(ks))
+            try:
+                # HybridRetriever needs both query string and embedding
+                results = retriever.retrieve(query, q_emb[0], top_k=max(ks))
+            except TypeError:
+                # DenseRetriever only needs the embedding
+                results = retriever.retrieve(q_emb[0], top_k=max(ks))
         else:
             results = retriever.retrieve(query, top_k=max(ks))
 
