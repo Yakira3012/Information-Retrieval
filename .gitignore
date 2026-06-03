@@ -1,0 +1,29 @@
+# Environment & secrets
+.env
+*.env
+
+# Data (too large for GitHub - upload to Drive)
+data/
+index/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+env/
+venv/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Outputs with large files (keep charts, exclude raw dumps)
+outputs/*.pkl
+outputs/*.bin
+
+# Local stuff
+local/
