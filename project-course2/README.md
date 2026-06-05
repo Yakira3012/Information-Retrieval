@@ -33,7 +33,7 @@ project-course2/
 │   ├── results_table.csv     # All experiment results
 │   └── charts/               # Generated visualizations
 ├── paper/
-│   └── research_paper.docx   # ACL-format research write-up
+│   └── research_paper_public.docx   # ACL-format research write-up
 ├── scripts/
 │   └── setup_ollama.sh       # One-time Ollama/llama3 setup
 ├── requirements.txt
@@ -95,9 +95,8 @@ jupyter notebook rag_experiments.ipynb
 
 ## Links
 - 📓 Notebook: *(this repo)*
-- 🗂️ Index files (FAISS/BM25 + embeddings pkl): [Google Drive](https://drive.google.com/drive/folders/1pZ95Gpqa4cO5RubbUtlqzG6qJ3poYxsn?usp=drive_link)
-- 📊 Outputs (embeddings, chunking pkl): [Google Drive](https://drive.google.com/drive/folders/1lbAqrMuUccCIQzb6k1YTD4_OFu7xuJM_?usp=drive_link)
-- 🎥 Presentation video: *TBD*
+- 🗂️ Index files (FAISS/BM25 + embeddings pkl): [Google Drive](https://drive.google.com/drive/folders/1QxLgdW0lBLxDqrMkdGQw_Nh3avCz1PCs?usp=drive_link)
+- 📊 Outputs (embeddings, chunking pkl): [Google Drive](https://drive.google.com/drive/folders/11_bWS_RJcoaT22yxs9P45Qam6mMMmZ_f?usp=drive_link)
 
 ## References
 - Manning, C., Raghavan, P., Schütze, H. (2008). *Introduction to Information Retrieval*. Cambridge University Press.
