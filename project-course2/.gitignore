@@ -3,6 +3,8 @@ local/
 .env
 .claude/
 paper/research_paper.docx
+paper/research_paper_public.docx
+paper/research_paper.docx.pdf
 
 # Corpus (proprietary textbook PDF)
 data/
